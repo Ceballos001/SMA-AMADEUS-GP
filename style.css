@@ -76,12 +76,19 @@ nav ul li a:hover {
 .carousel-text h1 {
     font-size: 3em;
 }
+
+/* Botón catálogo centrado */
 .btn-comprar {
+    display: block;
+    margin: 30px auto;
+    width: fit-content;
     background: red;
-    padding: 10px 20px;
+    padding: 12px 24px;
     text-decoration: none;
     color: white;
-    border-radius: 5px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s ease;
 }
 .btn-comprar:hover {
     background: darkred;
@@ -153,70 +160,4 @@ footer {
     text-align: center;
     padding: 15px;
     font-size: 0.9em;
-}
-
-/* HERO / carousel */
-.hero {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 65vh; /* antes estaba en 88vh */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    z-index: 10;
-}
-
-.slides img {
-    height: 65vh; /* coincide con el alto del hero */
-}
-
-.hero-content {
-    position: absolute;
-    left: 50%;
-    top: 54%; /* antes estaba 50%, lo bajamos un poco */
-    transform: translate(-50%, -50%);
-    text-align: center;
-    z-index: 5;
-    padding: 26px;
-    background: linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.12));
-    border-radius: 14px;
-    border: 1px solid var(--glass-border);
-}
-
-.hero-cta {
-    display: flex;
-    gap: 12px;
-    justify-content: center;
-    margin-top: 15px; /* espacio adicional debajo del texto */
-}
-
-
-img {
-    width: 100px;
-    height: 150px;
-}
-
-.carousel img{
-    width: 20%;
-    height: 20%;
-    /* display: block; */
-    /* margin-left: 422px; */
-    margin-right: 500px;
-}
-
-.carousel {
-    height: 240px;
-}
-
-.carousel-text {
-    margin-left: 300px;
-    /* width: 150px; */
-    height: 200px;
-}
-
-.btn-comprar {
-    align-items: center;
 }
