@@ -1,59 +1,109 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SMA AMADEUS GP</title>
+    <title>SMA AMADEUS GP - Motos de Alta Gama</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="app.js">
     <link rel="shortcut icon" href="Assets/img/WhatsApp-Image-2025-07-31-at-14.55.29.ico" type="image/x-icon">
 </head>
-
 <body>
-    <script src="app.js"></script>
-    <header>
 
-        <img src="Assets/img/WhatsApp-Image-2025-07-31-at-14.55.29.ico" alt="">
+    <!-- Encabezado -->
+    <header>
+        <img src="Assets/img/WhatsApp-Image-2025-07-31-at-14.55.29.ico" alt="SMA AMADEUS GP Logo">
         <nav>
             <ul>
-                <li><a href="Index.html">Inicio</a></li>
-
-                <li>
-                    <a href="Quienessomos.html">Quienes somos</a>
-                    <ul class="submenu">
-                        <li><a href="Mision.html"><b>Mision</b></a></li>
-                        <li><a href="vision.html"><b>Vision</b></a></li>
-                        <li><a href="historia.html"><b>Historia</b></a></li>
-                    </ul>
-                </li>
-
-                <li>
-                    <a href="Servicios.html">Servicios</a>
-                    <ul class="submenu">
-                        <li><a href="ventaderepuestos.html"><b>Venta de repuestos</b></a></li>
-                        <li><a href="mantenimiento.html"><b>Mantenimiento</b></a></li>
-                        <li><a href="asesorias.html"><b>Asesorias</b></a></li>
-
-                    </ul>
-                </li>
-                <li>
-                    <a href="Producto.html">Producto</a>
-                    <ul class="submenu">
-                        <li><a href="repuestos.html"><b>Repuesto</b></a></li>
-                        <li><a href="accesorios.html"><b>Accesorios</b></a></li>
-
-                    </ul>
-                </li>
-
-                <li><a href="#">Log in</a></li>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#nosotros">Quienes Somos</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#Iniciar Sesión" class="btn-login">Iniciar Sesión</a></li>
             </ul>
-
-
+        </nav>
     </header>
 
-    <h1>Una empresa</h1>
+    <!-- Carrusel -->
+    <section id="inicio" class="carousel">
+        <div class="slides">
+            <img src="Assets/img/WhatsApp-Image-2025-07-31-at-14.55.29.ico" alt="Moto de alta gama">
+            <img src="Assets/img/MOTO 1.jpg" alt="Ducati Panigale">
+            <img src="Assets/img/modelo2.jpg" alt="BMW R 1250 GS">
+            <img src="Assets/img/modelo3.jpg" alt="Kawasaki Z H2">
+        </div>
+        <div class="carousel-text">
+            <h1>SMA AMADEUS GP</h1>
+            <p>Potencia, diseño y exclusividad sobre dos ruedas</p><br><br>
+           
+        </div>
+    </section>
 
+    <!-- Sección quienes somos -->
+    <section id="nosotros" class="about">
+        <h2>Quienes Somos</h2>
+        <p>En <strong>SMA AMADEUS GP</strong> ofrecemos motos de alta gama y repuestos premium. Representamos las marcas más exclusivas y brindamos asesoría personalizada para cada cliente.</p>
+    </section>
+
+     
+
+    <!-- Productos destacados -->
+    <section id="productos" class="productos">
+        <h2>Modelos Destacados</h2>
+        <div class="grid-productos">
+            <div class="card">
+                <img src="Assets/img/modelo1.jpg" alt="Moto deportiva">
+                <h3>Ducati Panigale V4</h3>
+                <p>Máxima velocidad y diseño italiano</p>
+                <span>$45,000 USD</span>
+            </div>
+            <div class="card">
+                <img src="Assets/img/modelo2.jpg" alt="Moto touring">
+                <h3>BMW R 1250 GS</h3>
+                <p>La aventura sin límites</p>
+                <span>$25,000 USD</span>
+            </div>
+            <div class="card">
+                <img src="Assets/img/modelo3.jpg" alt="Moto naked">
+                <h3>Kawasaki Z H2</h3>
+                <p>Potencia sobrealimentada</p>
+                <span>$20,000 USD</span>
+            </div>
+              <a href="#productos" class="btn-comprar">Ver Catálogo</a>
+        </div>
+
+    </section>
+    
+
+    <!-- Contacto -->
+    <section id="contacto" class="contacto">
+        <h2>Contáctanos</h2>
+        <form>
+            <input type="text" placeholder="Nombre completo" required>
+            <input type="email" placeholder="Correo electrónico" required>
+            <textarea placeholder="Escribe tu mensaje..." required></textarea>
+            <button type="submit">Enviar Mensaje</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 SMA AMADEUS GP</p>
+    </footer>
+
+    <!-- Script Carrusel -->
+    <script>
+        let index = 0;
+        const slides = document.querySelectorAll(".slides img");
+        function showSlide() {
+            slides.forEach((img, i) => {
+                img.style.display = i === index ? "block" : "none";
+            });
+            index = (index + 1) % slides.length;
+        }
+        setInterval(showSlide, 4000);
+        showSlide();
+    </script>
 
 </body>
-
 </html>
